@@ -2,11 +2,11 @@
   "name": "whois-freaks",
   "label": "Whois Freaks",
   "version": "1.0.0",
-  "description": "",
+  "description": "Whois Freaks provide well-parsed and structured domain WHOIS data for all domain names, registrars, countries and TLDs since the birth of internet",
   "publisher": "Fortinet",
   "cs_approved": false,
   "cs_compatible": false,
-  "category": "Information",
+  "category": "Threat Intelligence",
   "icon_small_name": "sns_small.png",
   "icon_large_name": "sns_large.png",
   "help_online": "",
@@ -220,8 +220,8 @@
                 "required": false,
                 "editable": true,
                 "type": "text",
-                "tooltip": "For getting next or desired page whois info",
-                "description": "For getting next or desired page whois info"
+                "tooltip": "Specify the page number to get next or desired page of whois information",
+                "description": "Specify the page number to get next or desired page of whois information"
               }
             ]
           },

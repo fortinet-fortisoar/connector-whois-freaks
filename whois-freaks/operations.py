@@ -34,6 +34,8 @@ class whoisFreaks(object):
                     return response.json()
                 else:
                     return response.content
+            elif response.status_code == 404:
+                return response.text
             else:
                 logger.error(response.content)
                 raise ConnectorError(
