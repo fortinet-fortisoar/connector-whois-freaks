@@ -62,12 +62,14 @@ def whois_lookup(config, params):
     try:
         wf = whoisFreaks(config)
         params['whois'] = params.get('whois', '').lower()
-        if params.get('mode'):
-            params['mode'] = params.get('mode', '').lower()
-        if params.get('keyword') is None and params.get('email') is None and params.get('owner') is None and params.get(
-                'company') is None:
-            raise Exception("At least one parameter is required from \"Keyword\", \"Email Address\", \"Owner\" or "
-                            "\"Company\"")
+        if params.get('whois') == 'reverse':
+            if params.get('mode'):
+                params['mode'] = params.get('mode', '').lower()
+            if params.get('keyword') is None and params.get('email') is None and params.get(
+                    'owner') is None and params.get(
+                    'company') is None:
+                raise Exception("At least one parameter is required from \"Keyword\", \"Email Address\", \"Owner\" or "
+                                "\"Company\"")
         params.update({'apiKey': config.get('api_key'), 'format': 'JSON'})
         params = get_params(params)
         return wf.make_api_call(endpoint='v1.0/whois', params=params)
