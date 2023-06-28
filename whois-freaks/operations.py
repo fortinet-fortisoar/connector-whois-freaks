@@ -80,7 +80,8 @@ def dns_lookup(config, params):
     try:
         wf = whoisFreaks(config)
         lookup = ''.join(params.get('type')).replace("[", "").replace("]", "").replace("'", "").replace(" ", "")
-        endpoint = 'v1.0/dns/live?apiKey={}&domainName={}&format=JSON&type={}'.format(config.get('api_key'), params.get('domainName'), lookup)
+        endpoint = 'v1.0/dns/live?apiKey={}&domainName={}&format=JSON&type={}'.format(config.get('api_key'),
+                                                                                      params.get('domainName'), lookup)
         return wf.make_api_call(endpoint)
     except Exception as err:
         logger.exception(str(err))
@@ -100,8 +101,8 @@ def ssl_certificates(config, params):
 
 def _check_health(config):
     try:
-        wxa = whoisFreaks(config)
-        return wxa.whois_lookup(config=config, params={'domainName': 'google.com', 'whois': 'live'})
+        return whois_lookup(config=config,
+                            params={'domainName': 'google.com', 'whois': 'live', 'keyword': 'google.com'})
     except Exception as err:
         logger.exception(str(err))
         raise ConnectorError(str(err))
