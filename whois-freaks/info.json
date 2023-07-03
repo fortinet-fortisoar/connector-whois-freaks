@@ -19,7 +19,7 @@
         "visible": true,
         "type": "text",
         "name": "server_url",
-        "placeholder": "https://api.whoisfreaks.com",
+        "value": "https://api.whoisfreaks.com",
         "description": "Specify the URL of the WhoisFreak server to connect and perform automated operations"
       },
       {
