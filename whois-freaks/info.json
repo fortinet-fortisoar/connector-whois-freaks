@@ -1,6 +1,6 @@
 {
   "name": "whois-freaks",
-  "label": "Whois Freaks",
+  "label": "WhoisFreaks",
   "version": "1.0.0",
   "description": "Whois Freaks provide well-parsed and structured domain WHOIS data for all domain names, registrars, countries and TLDs since the birth of internet",
   "publisher": "Fortinet",
