@@ -2,7 +2,7 @@
   "name": "whois-freaks",
   "label": "WhoisFreaks",
   "version": "1.0.0",
-  "description": "Whois Freaks provide well-parsed and structured domain WHOIS data for all domain names, registrars, countries and TLDs since the birth of internet",
+  "description": "WhoisFreaks provide well-parsed and structured domain WHOIS data for all domain names, registrars, countries and TLDs since the birth of internet",
   "publisher": "Fortinet",
   "cs_approved": false,
   "cs_compatible": false,
@@ -29,7 +29,7 @@
         "editable": true,
         "visible": true,
         "required": true,
-        "description": "Specify the API key configured for your account using the WhoisXMLAPI."
+        "description": "Specify the API key configured for your account using the WhoisFreaks."
       },
       {
         "title": "Verify SSL",
@@ -236,7 +236,7 @@
       "category": "investigation",
       "annotation": "dns_lookup",
       "enabled": true,
-      "description": "Retrieves DNS Lookup for a specified domain name from Whois Freaks. A DNS lookup provides a domain’s corresponding IP address from its 'A' record as well as the domain’s mail server (MX record), nameserver (NS record), SPF (TXT record), and more records. ",
+      "description": "Retrieves DNS Lookup for a specified domain name from WhoisFreaks. A DNS lookup provides a domain’s corresponding IP address from its 'A' record as well as the domain’s mail server (MX record), nameserver (NS record), SPF (TXT record), and more records. ",
       "output_schema": {
         "domainName": "",
         "queryTime": "",
@@ -262,8 +262,8 @@
           "visible": true,
           "type": "text",
           "name": "domainName",
-          "tooltip": "Name of the domain whose DNS Lookup information you want to retrieve from Whois Freaks.",
-          "description": "Name of the domain whose DNS Lookup information you want to retrieve from Whois Freaks."
+          "tooltip": "Name of the domain whose DNS Lookup information you want to retrieve from WhoisFreaks.",
+          "description": "Name of the domain whose DNS Lookup information you want to retrieve from WhoisFreaks."
         },
         {
           "title": "DNS Type",
@@ -273,7 +273,7 @@
           "type": "multiselect",
           "name": "type",
           "tooltip": "Select Multiple Types to retrieve records ",
-          "description": "Select the lookup type based on which you want to retrieve records from Whois Freaks.",
+          "description": "Select the lookup type based on which you want to retrieve records from WhoisFreaks.",
           "value": "_all",
           "options": [
             "all",
