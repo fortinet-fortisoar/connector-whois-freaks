@@ -2,10 +2,10 @@
   "type": "workflow_collections",
   "data": [
     {
-      "uuid": "71bd35fd-459a-4e01-8edf-ebde9e2405c0",
+      "uuid": "20133b1f-d058-4814-a440-ea21aa06a3ef",
       "@type": "WorkflowCollection",
-      "name": "Sample - Whois Freaks - 1.0.0",
-      "description": "Whois Freaks provide well-parsed and structured domain WHOIS data for all domain names, registrars, countries and TLDs since the birth of internet",
+      "name": "Sample - WhoisFreaks - 1.0.0",
+      "description": "WhoisFreaks provide well-parsed and structured domain WHOIS data for all domain names, registrars, countries and TLDs since the birth of internet",
       "visible": true,
       "image": null,
       "recordTags": [
@@ -15,12 +15,12 @@
       "workflows": [
         {
           "@type": "Workflow",
-          "uuid": "d932980f-65ce-433a-98d3-f26d7bd86c15",
-          "collection": "/api/3/workflow_collections/71bd35fd-459a-4e01-8edf-ebde9e2405c0",
+          "uuid": "6b1674b0-3a1d-4f75-b078-9e89160bc2dc",
+          "collection": "/api/3/workflow_collections/20133b1f-d058-4814-a440-ea21aa06a3ef",
           "triggerLimit": null,
           "description": "Whois Lookup is a tool will gives users access to complete historical WHOIS records, including domain ownership and registrar information over time",
           "name": "Get Whois Lookup",
-          "tag": "#Whois Freaks",
+          "tag": "#WhoisFreaks",
           "recordTags": [
             "Whois",
             "whois-freaks"
@@ -30,17 +30,17 @@
           "singleRecordExecution": false,
           "parameters": [],
           "synchronous": false,
-          "triggerStep": "/api/3/workflow_steps/0a1aab3f-38b0-44e3-9ea8-c6892f098f24",
+          "triggerStep": "/api/3/workflow_steps/cf5dcf20-53ac-44e3-bf73-2843426a6100",
           "steps": [
             {
-              "uuid": "0a1aab3f-38b0-44e3-9ea8-c6892f098f24",
+              "uuid": "cf5dcf20-53ac-44e3-bf73-2843426a6100",
               "@type": "WorkflowStep",
               "name": "Start",
               "description": null,
               "status": null,
               "arguments": {
-                "route": "0de3b929-e0a7-4efa-8575-268fc05e41bd",
-                "title": "Whois Freaks: Get Whois Lookup",
+                "route": "25c6e64f-a350-4f77-a704-ca781d149372",
+                "title": "WhoisFreaks: Get Whois Lookup",
                 "resources": [
                   "alerts"
                 ],
@@ -59,13 +59,13 @@
               "stepType": "/api/3/workflow_step_types/f414d039-bb0d-4e59-9c39-a8f1e880b18a"
             },
             {
-              "uuid": "3cbefceb-4659-4c38-889a-236f777a387b",
+              "uuid": "1600631d-bb27-4533-a276-27f969263ae7",
               "@type": "WorkflowStep",
               "name": "Get Whois Lookup",
               "description": null,
               "status": null,
               "arguments": {
-                "name": "Whois Freaks",
+                "name": "WhoisFreaks",
                 "config": "''",
                 "params": [],
                 "version": "1.0.0",
@@ -84,23 +84,23 @@
           "routes": [
             {
               "@type": "WorkflowRoute",
-              "uuid": "aaec3014-891c-4384-aade-1c83235e17c9",
+              "uuid": "48fd3ac2-f45a-4733-b463-308db305c43d",
               "label": null,
               "isExecuted": false,
               "name": "Start-> Get Whois Lookup",
-              "sourceStep": "/api/3/workflow_steps/0a1aab3f-38b0-44e3-9ea8-c6892f098f24",
-              "targetStep": "/api/3/workflow_steps/3cbefceb-4659-4c38-889a-236f777a387b"
+              "sourceStep": "/api/3/workflow_steps/cf5dcf20-53ac-44e3-bf73-2843426a6100",
+              "targetStep": "/api/3/workflow_steps/1600631d-bb27-4533-a276-27f969263ae7"
             }
           ]
         },
         {
           "@type": "Workflow",
-          "uuid": "fe15ef78-c6ba-4aee-a8a3-12c5f144353d",
-          "collection": "/api/3/workflow_collections/71bd35fd-459a-4e01-8edf-ebde9e2405c0",
+          "uuid": "09424822-48ee-409b-9702-68f29f9e511a",
+          "collection": "/api/3/workflow_collections/20133b1f-d058-4814-a440-ea21aa06a3ef",
           "triggerLimit": null,
-          "description": "Retrieves DNS Lookup for a specified domain name from Whois Freaks. A DNS lookup provides a domain\u2019s corresponding IP address from its 'A' record as well as the domain\u2019s mail server (MX record), nameserver (NS record), SPF (TXT record), and more records. ",
+          "description": "Retrieves DNS Lookup for a specified domain name from WhoisFreaks. A DNS lookup provides a domain\u2019s corresponding IP address from its 'A' record as well as the domain\u2019s mail server (MX record), nameserver (NS record), SPF (TXT record), and more records. ",
           "name": "Get DNS Lookup",
-          "tag": "#Whois Freaks",
+          "tag": "#WhoisFreaks",
           "recordTags": [
             "Whois",
             "whois-freaks"
@@ -110,17 +110,17 @@
           "singleRecordExecution": false,
           "parameters": [],
           "synchronous": false,
-          "triggerStep": "/api/3/workflow_steps/c8fbf7aa-8ad5-4b2b-bd0c-3bead1ecaa87",
+          "triggerStep": "/api/3/workflow_steps/58c35c99-6370-4fd4-8ae2-409910c860db",
           "steps": [
             {
-              "uuid": "c8fbf7aa-8ad5-4b2b-bd0c-3bead1ecaa87",
+              "uuid": "58c35c99-6370-4fd4-8ae2-409910c860db",
               "@type": "WorkflowStep",
               "name": "Start",
               "description": null,
               "status": null,
               "arguments": {
-                "route": "842ad8f6-3962-46d5-98ca-f35c48bb9e15",
-                "title": "Whois Freaks: Get DNS Lookup",
+                "route": "61bf156f-d523-48c9-94c6-b68ffdea6c6d",
+                "title": "WhoisFreaks: Get DNS Lookup",
                 "resources": [
                   "alerts"
                 ],
@@ -139,13 +139,13 @@
               "stepType": "/api/3/workflow_step_types/f414d039-bb0d-4e59-9c39-a8f1e880b18a"
             },
             {
-              "uuid": "93f15149-458a-4314-bc30-45d4c14bbf6e",
+              "uuid": "ca8edcf5-e592-4347-8c25-a9c980079359",
               "@type": "WorkflowStep",
               "name": "Get DNS Lookup",
               "description": null,
               "status": null,
               "arguments": {
-                "name": "Whois Freaks",
+                "name": "WhoisFreaks",
                 "config": "''",
                 "params": {
                   "type": "_all"
@@ -166,23 +166,23 @@
           "routes": [
             {
               "@type": "WorkflowRoute",
-              "uuid": "01a54326-6264-4ed7-9ef3-3b325a61de67",
+              "uuid": "615ad106-2a8b-4cfc-a37d-8d021844083f",
               "label": null,
               "isExecuted": false,
               "name": "Start-> Get DNS Lookup",
-              "sourceStep": "/api/3/workflow_steps/c8fbf7aa-8ad5-4b2b-bd0c-3bead1ecaa87",
-              "targetStep": "/api/3/workflow_steps/93f15149-458a-4314-bc30-45d4c14bbf6e"
+              "sourceStep": "/api/3/workflow_steps/58c35c99-6370-4fd4-8ae2-409910c860db",
+              "targetStep": "/api/3/workflow_steps/ca8edcf5-e592-4347-8c25-a9c980079359"
             }
           ]
         },
         {
           "@type": "Workflow",
-          "uuid": "e05596ac-8435-43e2-92fa-6f8875ad08be",
-          "collection": "/api/3/workflow_collections/71bd35fd-459a-4e01-8edf-ebde9e2405c0",
+          "uuid": "dbc17c21-71fe-418f-b59a-2b7203752b43",
+          "collection": "/api/3/workflow_collections/20133b1f-d058-4814-a440-ea21aa06a3ef",
           "triggerLimit": null,
           "description": "Obtain a domain name\u2019s Secure Sockets Layer (SSL) certificate and trace its complete SSL certificate chain to reveal potential inconsistencies and misconfigurations that may translate to exploitable vulnerabilities. A single SSL Certificate Chain API query provides details that can ease your security enrichment efforts, allowing you to know which domains are trustworthy and which are not",
           "name": "Get SSL Certificates",
-          "tag": "#Whois Freaks",
+          "tag": "#WhoisFreaks",
           "recordTags": [
             "Whois",
             "whois-freaks"
@@ -192,17 +192,17 @@
           "singleRecordExecution": false,
           "parameters": [],
           "synchronous": false,
-          "triggerStep": "/api/3/workflow_steps/f9c93401-0d72-4572-a44f-06d1d9eecb86",
+          "triggerStep": "/api/3/workflow_steps/f7174f0f-b1e3-46db-9eb0-0a06e32033a5",
           "steps": [
             {
-              "uuid": "f9c93401-0d72-4572-a44f-06d1d9eecb86",
+              "uuid": "f7174f0f-b1e3-46db-9eb0-0a06e32033a5",
               "@type": "WorkflowStep",
               "name": "Start",
               "description": null,
               "status": null,
               "arguments": {
-                "route": "2d92b9f7-dd8a-4aba-91a2-f86992a109c4",
-                "title": "Whois Freaks: Get SSL Certificates",
+                "route": "0d1d13d0-ce2a-4528-bfde-dc382154ed9f",
+                "title": "WhoisFreaks: Get SSL Certificates",
                 "resources": [
                   "alerts"
                 ],
@@ -221,13 +221,13 @@
               "stepType": "/api/3/workflow_step_types/f414d039-bb0d-4e59-9c39-a8f1e880b18a"
             },
             {
-              "uuid": "85976d63-6d71-422c-84e3-13a5e7b5cf82",
+              "uuid": "05232666-6d57-499f-af7a-6aaac69ae3e1",
               "@type": "WorkflowStep",
               "name": "Get SSL Certificates",
               "description": null,
               "status": null,
               "arguments": {
-                "name": "Whois Freaks",
+                "name": "WhoisFreaks",
                 "config": "''",
                 "params": {
                   "chain": false,
@@ -249,12 +249,12 @@
           "routes": [
             {
               "@type": "WorkflowRoute",
-              "uuid": "e3bb8659-421e-4b76-8e67-8654df030fb0",
+              "uuid": "261aadf2-40c9-4f3c-b91c-811bb71662ff",
               "label": null,
               "isExecuted": false,
               "name": "Start-> Get SSL Certificates",
-              "sourceStep": "/api/3/workflow_steps/f9c93401-0d72-4572-a44f-06d1d9eecb86",
-              "targetStep": "/api/3/workflow_steps/85976d63-6d71-422c-84e3-13a5e7b5cf82"
+              "sourceStep": "/api/3/workflow_steps/f7174f0f-b1e3-46db-9eb0-0a06e32033a5",
+              "targetStep": "/api/3/workflow_steps/05232666-6d57-499f-af7a-6aaac69ae3e1"
             }
           ]
         }
