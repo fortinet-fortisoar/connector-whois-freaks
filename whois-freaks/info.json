@@ -2,7 +2,7 @@
   "name": "whois-freaks",
   "label": "WhoisFreaks",
   "version": "1.0.0",
-  "description": "WhoisFreaks provide well-parsed and structured domain WHOIS data for all domain names, registrars, countries and TLDs since the birth of internet",
+  "description": "WhoisFreaks provide well-parsed and structured domain WHOIS data for all domain names, registrars, countries and TLDs since the birth of internet. The carefully crawled current and historical domain data is available in the form of REST APIs, lookup tools, and downloadable database",
   "publisher": "Fortinet",
   "cs_approved": false,
   "cs_compatible": false,
@@ -20,7 +20,7 @@
         "type": "text",
         "name": "server_url",
         "value": "https://api.whoisfreaks.com",
-        "description": "Specify the URL of the WhoisFreak server to connect and perform automated operations"
+        "description": "Specify the URL of the WhoisFreaks server to connect and perform automated operations"
       },
       {
         "name": "api_key",
@@ -35,8 +35,8 @@
         "title": "Verify SSL",
         "name": "verify_ssl",
         "type": "checkbox",
-        "description": "Specifies whether the SSL certificate for the server is to be verified or not.",
-        "tooltip": "Specifies whether the SSL certificate for the server is to be verified or not.",
+        "description": "Specifies whether the SSL certificate for the server is to be verified.By default, this option is set to True",
+        "tooltip": "Specifies whether the SSL certificate for the server is to be verified.By default, this option is set to True",
         "required": false,
         "editable": true,
         "visible": true,
@@ -48,7 +48,7 @@
     {
       "operation": "whois_lookup",
       "title": "Get Whois Lookup",
-      "description": "Whois Lookup is a tool will gives users access to complete historical WHOIS records, including domain ownership and registrar information over time",
+      "description": "Gives users access to complete historical WHOIS records, including domain ownership and registrar information over time",
       "enabled": true,
       "category": "investigation",
       "annotation": "whois_lookup",
@@ -135,7 +135,7 @@
           "title": "Domain Name",
           "name": "domainName",
           "type": "text",
-          "description": "The domain for which live WHOIS data is requested",
+          "description": "Specify the domain for which live WHOIS data is requested",
           "required": true,
           "editable": true,
           "visible": true
@@ -162,8 +162,8 @@
                 "editable": true,
                 "type": "text",
                 "placeholder": "youtube",
-                "tooltip": "Retrive the domain that have specified keyword. At least one parameter is required from \"Keyword\", \"Email Address\", \"Owner\" or \"Company\"",
-                "description": "Retrive the domain that have specified keyword"
+                "tooltip": "Specify the domain to retrieve its details",
+                "description": "Specify the domain to retrieve its details"
               },
               {
                 "title": "Email Address",
@@ -173,8 +173,8 @@
                 "editable": true,
                 "type": "text",
                 "placeholder": "abc@gmail.com",
-                "tooltip": "Retrive email address of the specified domain. At least one parameter is required from \"Keyword\", \"Email Address\", \"Owner\" or \"Company\"",
-                "description": "Retrive email address of the specified domain"
+                "tooltip": "Specify the email address to retrieve its domain",
+                "description": "Specify the email address to retrieve its domain"
               },
               {
                 "title": "Owner",
@@ -184,8 +184,8 @@
                 "editable": true,
                 "type": "text",
                 "placeholder": "michal",
-                "tooltip": "Retrive the domain that have specified owner. At least one parameter is required from \"Keyword\", \"Email Address\", \"Owner\" or \"Company\"",
-                "description": "Retrive the domain that have specified owner"
+                "tooltip": "Specify the domain to retrieve its owner",
+                "description": "Specify the domain to retrieve its owner"
               },
               {
                 "title": "Company",
@@ -195,8 +195,8 @@
                 "editable": true,
                 "type": "text",
                 "placeholder": "michal",
-                "tooltip": "Retrive the domain that have specified company. At least one parameter is required from \"Keyword\", \"Email Address\", \"Owner\" or \"Company\"",
-                "description": "Retrive the domain that have specified company"
+                "tooltip": "Specify the company to retrieve its associated domain",
+                "description": "Specify the company to retrieve its associated domain"
               },
               {
                 "title": "Mode",
@@ -210,8 +210,8 @@
                   "Default"
                 ],
                 "value": "Mini",
-                "tooltip": "Reverse Whois lookup API lets you query in two modes. 1. Default Mode. 2. Mini Mode.",
-                "description": "Reverse Whois lookup API lets you query in two modes. 1. Default Mode. 2. Mini Mode."
+                "tooltip": "Select a mode to query the reverse Whois lookup API. You can select from the following options. 1. Default Mode. 2. Mini Mode.",
+                "description": "Select a mode to query the reverse Whois lookup API. You can select from the following options. 1. Default Mode. 2. Mini Mode."
               },
               {
                 "title": "Page Number",
@@ -220,13 +220,15 @@
                 "required": false,
                 "editable": true,
                 "type": "text",
-                "tooltip": "Specify the page number to get next or desired page of whois information",
-                "description": "Specify the page number to get next or desired page of whois information"
+                "tooltip": "Specify the page number from which to get the whois information",
+                "description": "Specify the page number from which to get the whois information"
               }
-            ]
+            ],
+            "tooltip": "Select to get the reverse WHOIS records. Once selected, specify values in the following fields. At least one parameter is required from \"Keyword\", \"Email Address\", \"Owner\" or \"Company\"",
+            "description": "Select to get the reverse WHOIS records. Once selected, specify values in the following fields. At least one parameter is required from \"Keyword\", \"Email Address\", \"Owner\" or \"Company\""
           },
-          "tooltip": "Live - results in getting the latest WHOIS record even if it's incomplete, Historical - results in getting the historical WHOIS record and Reverse - results in getting the reverse WHOIS records",
-          "description": "Live - results in getting the latest WHOIS record even if it's incomplete, Historical - results in getting the historical WHOIS record and Reverse - results in getting the reverse WHOIS records"
+          "tooltip": "Select the Whois type from following options: Live - results in getting the latest WHOIS record even if it's incomplete, Historical - results in getting the historical WHOIS record and Reverse - results in getting the reverse WHOIS records",
+          "description": "Select the Whois type from following options: Live - results in getting the latest WHOIS record even if it's incomplete, Historical - results in getting the historical WHOIS record and Reverse - results in getting the reverse WHOIS records"
         }
       ]
     },
@@ -236,7 +238,7 @@
       "category": "investigation",
       "annotation": "dns_lookup",
       "enabled": true,
-      "description": "Retrieves DNS Lookup for a specified domain name from WhoisFreaks. A DNS lookup provides a domain’s corresponding IP address from its 'A' record as well as the domain’s mail server (MX record), nameserver (NS record), SPF (TXT record), and more records. ",
+      "description": "Retrieves DNS Lookup for a specified domain name from WhoisFreaks. A DNS lookup provides a domain's corresponding IP address from its 'A' record as well as the domain's mail server (MX record), NameServer (NS record), SPF (TXT record), and more records",
       "output_schema": {
         "domainName": "",
         "queryTime": "",
@@ -262,7 +264,7 @@
           "visible": true,
           "type": "text",
           "name": "domainName",
-          "tooltip": "Name of the domain whose DNS Lookup information you want to retrieve from WhoisFreaks.",
+          "tooltip": "Specify the name of the domain to retrieve its DNS Lookup information from WhoisFreaks",
           "description": "Name of the domain whose DNS Lookup information you want to retrieve from WhoisFreaks."
         },
         {
@@ -273,8 +275,8 @@
           "type": "multiselect",
           "name": "type",
           "tooltip": "Select Multiple Types to retrieve records ",
-          "description": "Select the lookup type based on which you want to retrieve records from WhoisFreaks.",
-          "value": "_all",
+          "description": "Select the lookup type to retrieve its records from WhoisFreaks. Select all to retrieve all DNS types",
+          "value": "all",
           "options": [
             "all",
             "A",
@@ -336,7 +338,7 @@
     {
       "operation": "ssl_certificates",
       "title": "Get SSL Certificates",
-      "description": "Obtain a domain name’s Secure Sockets Layer (SSL) certificate and trace its complete SSL certificate chain to reveal potential inconsistencies and misconfigurations that may translate to exploitable vulnerabilities. A single SSL Certificate Chain API query provides details that can ease your security enrichment efforts, allowing you to know which domains are trustworthy and which are not",
+      "description": "Obtains a domain name's Secure Sockets Layer (SSL) certificate and trace its complete SSL certificate chain to reveal potential inconsistencies and misconfigurations that may translate to exploitable vulnerabilities. A single SSL Certificate Chain API query provides details that can ease your security enrichment efforts, allowing you to know which domains are trustworthy and which are not",
       "enabled": true,
       "category": "investigation",
       "annotation": "ssl_certificates",
@@ -403,7 +405,7 @@
           "title": "Domain Name",
           "name": "domainName",
           "type": "text",
-          "description": "The domain for which ssl certificate is requested",
+          "description": "Specify the domain for which SSL certificate is requested",
           "required": true,
           "editable": true,
           "visible": true
@@ -412,8 +414,8 @@
           "title": "With Chain",
           "name": "chain",
           "type": "checkbox",
-          "description": "If true, allows you to get all domain certificates sorted from the end-user to the root one",
-          "tooltip": "If true, allows you to get all domain certificates sorted from the end-user to the root one",
+          "description": "Select to get all domain certificates sorted from the end-user to the root",
+          "tooltip": "Select to get all domain certificates sorted from the end-user to the root",
           "required": false,
           "editable": true,
           "visible": true,
@@ -423,8 +425,8 @@
           "title": "SSL Raw",
           "name": "SSLRaw",
           "type": "checkbox",
-          "description": "For getting the raw openssl response of the domain. Default value is \"false\"",
-          "tooltip": "For getting the raw openssl response of the domain. Default value is \"false\"",
+          "description": "Select to get the raw OpenSSL response of the domain. Default value is false.",
+          "tooltip": "Select to get the raw OpenSSL response of the domain. Default value is false.",
           "required": false,
           "editable": true,
           "visible": true,
