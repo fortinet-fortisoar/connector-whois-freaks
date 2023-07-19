@@ -223,9 +223,7 @@
                 "tooltip": "Specify the page number from which to get the whois information",
                 "description": "Specify the page number from which to get the whois information"
               }
-            ],
-            "tooltip": "Select to get the reverse WHOIS records. Once selected, specify values in the following fields. At least one parameter is required from \"Keyword\", \"Email Address\", \"Owner\" or \"Company\"",
-            "description": "Select to get the reverse WHOIS records. Once selected, specify values in the following fields. At least one parameter is required from \"Keyword\", \"Email Address\", \"Owner\" or \"Company\""
+            ]
           },
           "tooltip": "Select the Whois type from following options: Live - results in getting the latest WHOIS record even if it's incomplete, Historical - results in getting the historical WHOIS record and Reverse - results in getting the reverse WHOIS records",
           "description": "Select the Whois type from following options: Live - results in getting the latest WHOIS record even if it's incomplete, Historical - results in getting the historical WHOIS record and Reverse - results in getting the reverse WHOIS records"
